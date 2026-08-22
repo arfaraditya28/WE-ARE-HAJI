@@ -5,3 +5,35 @@
 html {
   scroll-behavior: smooth;
 }
+
+@keyframes aurora {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes float-blob {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(40px, -30px) scale(1.1);
+  }
+  66% {
+    transform: translate(-30px, 20px) scale(0.95);
+  }
+}
+
+.animate-aurora {
+  background-size: 200% 200%;
+  animation: aurora 14s ease infinite;
+}
+
+.animate-blob {
+  animation: float-blob 18s ease-in-out infinite;
+}

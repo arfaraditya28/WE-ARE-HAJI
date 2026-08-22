@@ -52,7 +52,8 @@ export const team: Member[] = [
     experience: [],
   },
   {
-    name: "Muhammad Arfa Raditya",
+    id: "arfa",
+    name: "Arfa",
     role: "Senior Developer | Informatics Student",
     photo: "/asset/asset-arfa/arfa.jpg",
     bio: "Mahasiswa Program Studi Teknik Informatika di Institut Teknologi Sumatera (ITERA). Ex Immo 118 & Top Indonesia Beatrix😎😝",

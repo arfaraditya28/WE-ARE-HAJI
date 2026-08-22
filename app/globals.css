@@ -5,3 +5,192 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* ═══════════════════════════════════════════════════════
+   ACCENT TOKEN SYSTEM
+   Satu sumber warna untuk seluruh halaman. Semua elemen
+   beraksen membaca --acc / --acc-2, sehingga ganti aksen
+   akan menggeser SEMUA warna secara serempak (padu).
+   Ini juga menggantikan class dinamis `bg-${accent}-500`
+   yang tidak pernah ter-generate oleh Tailwind.
+   ═══════════════════════════════════════════════════════ */
+:root {
+  --acc: 99 102 241;
+  --acc-2: 139 92 246;
+  --surface: 255 255 255;
+  --ink: 23 23 23;
+}
+
+[data-accent="indigo"]  { --acc: 79 70 229;  --acc-2: 124 58 237; }
+[data-accent="emerald"] { --acc: 5 150 105;  --acc-2: 13 148 136; }
+[data-accent="rose"]    { --acc: 225 29 72;  --acc-2: 219 39 119; }
+[data-accent="amber"]   { --acc: 217 119 6;  --acc-2: 234 88 12;  }
+[data-accent="cyan"]    { --acc: 37 99 235;  --acc-2: 59 130 246;  }
+
+/* Versi lebih terang agar kontras tetap nyaman di dark mode */
+.dark [data-accent="indigo"]  { --acc: 129 140 248; --acc-2: 167 139 250; }
+.dark [data-accent="emerald"] { --acc: 52 211 153;  --acc-2: 45 212 191;  }
+.dark [data-accent="rose"]    { --acc: 251 113 133; --acc-2: 244 114 182; }
+.dark [data-accent="amber"]   { --acc: 251 191 36;  --acc-2: 251 146 60;  }
+.dark [data-accent="cyan"]    { --acc: 96 165 250;  --acc-2: 147 197 253;  }
+
+.dark {
+  --surface: 24 24 27;
+  --ink: 244 244 245;
+}
+
+/* ── Utilitas beraksen ──────────────────────────────── */
+.acc-text        { color: rgb(var(--acc)); }
+.acc-fill        { background-color: rgb(var(--acc)); }
+.acc-fill:hover  { background-color: rgb(var(--acc) / 0.88); }
+.acc-tint        { background-color: rgb(var(--acc) / 0.09); }
+.acc-tint-soft   { background-color: rgb(var(--acc) / 0.05); }
+.acc-border      { border-color: rgb(var(--acc) / 0.28); }
+.acc-border-soft { border-color: rgb(var(--acc) / 0.14); }
+.acc-ring        { box-shadow: 0 0 0 3px rgb(var(--acc) / 0.14); }
+.acc-glow        { box-shadow: 0 14px 34px -14px rgb(var(--acc) / 0.55); }
+
+/* Hover beraksen. Ditulis sebagai CSS biasa karena varian Tailwind
+   (mis. `hover:acc-text`) hanya berlaku untuk utility bawaan Tailwind. */
+.acc-link {
+  transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+}
+.acc-link:hover {
+  color: rgb(var(--acc));
+  border-color: rgb(var(--acc) / 0.35);
+  background-color: rgb(var(--acc) / 0.07);
+}
+
+.acc-gradient {
+  background-image: linear-gradient(115deg, rgb(var(--acc)), rgb(var(--acc-2)));
+}
+
+.acc-gradient-text {
+  background-image: linear-gradient(115deg, rgb(var(--acc)), rgb(var(--acc-2)));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.acc-blob {
+  background: radial-gradient(circle at center, rgb(var(--acc) / 0.5), transparent 68%);
+}
+.acc-blob-2 {
+  background: radial-gradient(circle at center, rgb(var(--acc-2) / 0.42), transparent 68%);
+}
+
+/* ── Permukaan lembut (mengurangi kesan kaku) ───────────
+   Border tipis + shadow difus, bukan garis keras.       */
+.surface {
+  background-color: rgb(var(--surface) / 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgb(0 0 0 / 0.055);
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.02), 0 14px 34px -22px rgb(0 0 0 / 0.28);
+}
+
+.dark .surface {
+  background-color: rgb(var(--surface) / 0.66);
+  border-color: rgb(255 255 255 / 0.07);
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.25), 0 16px 40px -24px rgb(0 0 0 / 0.75);
+}
+
+.surface-quiet {
+  background-color: rgb(var(--surface) / 0.45);
+  border: 1px solid rgb(0 0 0 / 0.045);
+}
+
+.dark .surface-quiet {
+  background-color: rgb(255 255 255 / 0.025);
+  border-color: rgb(255 255 255 / 0.055);
+}
+
+/* Kartu yang bereaksi halus saat hover — angkat sedikit saja */
+.lift {
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+              border-color 0.35s ease;
+}
+
+.lift:hover {
+  transform: translateY(-3px);
+  border-color: rgb(var(--acc) / 0.28);
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.03), 0 20px 40px -24px rgb(var(--acc) / 0.5);
+}
+
+/* ── Dot Grid Background ─────────────────────────────── */
+.dot-pattern {
+  background-image: radial-gradient(circle, rgb(var(--acc) / 0.16) 1px, transparent 1px);
+  background-size: 26px 26px;
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
+}
+
+.dark .dot-pattern {
+  background-image: radial-gradient(circle, rgb(var(--acc) / 0.14) 1px, transparent 1px);
+}
+
+/* ── Fade-in on Scroll ───────────────────────────────── */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease both;
+}
+
+/* ── Gradient Text (dipakai member-sections) ─────────── */
+.gradient-text {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Titik timeline: denyut halus, bukan glow menyala ── */
+@keyframes node-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgb(var(--acc) / 0.28); }
+  50%      { box-shadow: 0 0 0 6px rgb(var(--acc) / 0); }
+}
+
+.timeline-node {
+  animation: node-pulse 3.2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* ── Scrollbar ramping untuk panel terminal ──────────── */
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(255 255 255 / 0.16) transparent;
+}
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: rgb(255 255 255 / 0.16);
+  border-radius: 999px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(255 255 255 / 0.28);
+}
+
+/* Hormati preferensi pengguna yang mematikan animasi */
+@media (prefers-reduced-motion: reduce) {
+  .timeline-node,
+  .fade-in-up,
+  .lift {
+    animation: none !important;
+    transition: none !important;
+  }
+}

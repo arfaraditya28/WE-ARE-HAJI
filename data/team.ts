@@ -1,3 +1,4 @@
+// hanung ganteng izin tampil
 export interface PortfolioLink {
   label: string
   url: string
@@ -51,13 +52,34 @@ export const team: Member[] = [
     experience: [],
   },
   {
-    id: "arfa",
-    name: "Arfa",
-    role: "—",
-    photo: "/placeholder.svg",
-    bio: "",
-    portfolio: [],
-    experience: [],
+    name: "Muhammad Arfa Raditya",
+    role: "Senior Developer | Informatics Student",
+    photo: "/asset/asset-arfa/arfa.jpg",
+    bio: "Mahasiswa Program Studi Teknik Informatika di Institut Teknologi Sumatera (ITERA). Ex Immo 118 & Top Indonesia Beatrix😎😝",
+    cvUrl: "/asset/asset-arfa/cv-arfa.pdf",
+    portfolio: [{ label: "arfaraditya.my.id", url: "https://arfaraditya.my.id" }],
+    experience: [
+      {
+        year: "2026 – Sekarang",
+        title: "Departemen Eksternal — Divisi Ekstra Kampus HMIF ITERA",
+        desc: "Menjalin komunikasi dan kerja sama dengan organisasi di luar kampus melalui koordinasi dengan berbagai pihak eksternal untuk memperluas jaringan relasi himpunan.",
+      },
+      {
+        year: "2025",
+        title: "Staff Divisi Fundraising — Sub Divisi Dana Usaha Informatics Festival",
+        desc: "Berperan dalam Sub Divisi Dana Usaha Infest untuk membantu memenuhi kebutuhan pendanaan acara melalui kegiatan dana usaha.",
+      },
+      {
+        year: "2026",
+        title: "Staff Divisi Implementasi Teknologi —Sub Divisi Content Research Program Pengenalan Lingkungan Kampus (PPLK) ITERA",
+        desc: "Melakukan riset, pengumpulan, dan validasi data sebagai bahan penyusunan konten website PPLK 2026.",
+      },
+      {
+        year: "2026",
+        title: "Staff Divisi Acara — Sub Divisi Manajemen Lomba Informatics Festival",
+        desc: "Berperan dalam pengelolaan perlombaan pada acara Informatics Festival 2026, khususnya kompetisi Mobile Legends, dengan mengatur alur pertandingan dan memastikan perlombaan berjalan dengan baik.",
+      },
+    ],
   },
   {
     id: "jeremi",

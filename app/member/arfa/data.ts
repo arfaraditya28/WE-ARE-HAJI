@@ -1,3 +1,4 @@
+// hanung ganteng izin tampil
 import type { Member } from "@/data/team"
 
 interface SocialLink {

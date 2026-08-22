@@ -1,3 +1,4 @@
+// hanung ganteng izin tampil
 import Link from "next/link"
 import type { Member, ImageItem, ProjectItem } from "@/data/team"
 

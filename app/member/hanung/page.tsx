@@ -1,3 +1,4 @@
+// hanung ganteng izin tampil
 import Link from "next/link"
 import { getMember, getAdjacent } from "@/data/team"
 

@@ -1,3 +1,4 @@
+// hanung ganteng izin tampil
 export default function Hero() {
   return (
     <header className="relative overflow-hidden">

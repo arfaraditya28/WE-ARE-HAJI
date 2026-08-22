@@ -1,3 +1,4 @@
+// hanung ganteng izin tampil
 import { team } from "@/data/team"
 import MemberCard from "./MemberCard"
 

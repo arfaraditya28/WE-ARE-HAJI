@@ -12,6 +12,7 @@ export default function MemberCard({ member }: { member: Member }) {
         src={member.photo}
         alt={member.name}
         className="mx-auto h-28 w-28 rounded-full object-cover"
+        style={member.photoPosition ? { objectPosition: member.photoPosition } : undefined}
       />
       <h3 className="mt-4 text-lg font-semibold text-neutral-900 dark:text-neutral-100">
         {member.name}

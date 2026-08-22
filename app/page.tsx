@@ -1,3 +1,4 @@
+// hanung ganteng izin tampil
 import Hero from "@/components/Hero"
 import TeamGrid from "@/components/TeamGrid"
 import Footer from "@/components/Footer"

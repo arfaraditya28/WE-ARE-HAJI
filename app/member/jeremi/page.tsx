@@ -1,3 +1,4 @@
+// hanung ganteng izin tampil
 import { getMember, getAdjacent } from "@/data/team"
 import {
   BackLink,

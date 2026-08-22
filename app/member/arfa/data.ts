@@ -11,9 +11,9 @@ export const arfa: ArfaMember = {
   id: "arfa",
   name: "Muhammad Arfa Raditya",
   role: "124140015",
-  photo: "/arfa.jpg",
+  photo: "/asset/asset-arfa/arfa.jpg",
   bio: "Mahasiswa Program Studi Teknik Informatika di Institut Teknologi Sumatera (ITERA). Ex Immo 118 & Top Indonesia Beatrix😎😝",
-  cvUrl: "/cv-arfa.pdf",
+  cvUrl: "/asset/asset-arfa/cv-arfa.pdf",
   portfolio: [{ label: "arfaraditya.my.id", url: "https://arfaraditya.my.id" }],
   experience: [
     {

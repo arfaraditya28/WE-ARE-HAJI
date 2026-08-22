@@ -25,6 +25,7 @@ export interface Member {
   name: string
   role: string
   photo: string
+  photoPosition?: string
   bio: string
   cvUrl?: string
   portfolio: PortfolioLink[]
@@ -42,8 +43,9 @@ export const team: Member[] = [
   {
     id: "hanung",
     name: "Hanung",
-    role: "—",
-    photo: "/placeholder.svg",
+    role: "Software Engineer | Informatics Student",
+    photo: "/asset/asset-hanung/pp-hanung.png",
+    photoPosition: "50% 15%",
     bio: "",
     portfolio: [],
     experience: [],
@@ -70,9 +72,9 @@ export const team: Member[] = [
     id: "irfan",
     name: "Muhammad Irfan Ramadhan",
     role: "Full-Stack Developer | Informatics Student",
-    photo: "/image/gambar-pp-irfan.png",
+    photo: "/asset/asset-irfan/gambar-pp-irfan.png",
     bio: "Mahasiswa Informatika semester 5 yang berfokus pada pengembangan perangkat lunak, Artificial Intelegence. Aktif berorganisasi dan selalu terbuka untuk belajar teknologi baru serta berkolaborasi dalam tim untuk menciptakan solusi digital.",
-    cvUrl: "/cv-irfan.pdf",
+    cvUrl: "/asset/asset-irfan/serti asprak.pdf",
     portfolio: [
       { label: "GitHub", url: "https://github.com/irfanramadhan123" },
       { label: "LinkedIn", url: "https://www.linkedin.com/in/irfan-ramadhan" },
@@ -92,19 +94,19 @@ export const team: Member[] = [
         title: "S1 Teknik Informatika - Institut Teknologi Sumatera",
         year: "2024 - Sekarang",
         desc: "Fokus pada Rekayasa Perangkat Lunak dan Artificial Intelegence. IPK: 3.8/4.0",
-        image: "/image/logo-itera.png"
+        image: "/asset/asset-irfan/logo-itera.png"
       },
       {
         title: "MAN 1 Metro ",
         year: "2021 - 2024",
         desc: "Jurusan MIPA.",
-        image: "/image/man-1-metro.jpg"
+        image: "/asset/asset-irfan/man-1-metro.jpg"
       },
       {
         title: "SMP Muhammadiyah Ahmad Dahlan Metro",
         year: "2018 - 2021",
         desc: "Pendidikan Menengah Pertama.",
-        image: "/image/logo-muad.jpg"
+        image: "/asset/asset-irfan/logo-muad.jpg"
       }
     ],
     organizations: [
@@ -112,13 +114,13 @@ export const team: Member[] = [
         title: "Staff Ekstra Campus - Himpunan Mahasiswa Informatika",
         year: "2026 - sekarang",
         desc: "Sebagai delegari HMIF ITERA, bertugas untuk menjalin hubungan dengan organisasi dan Himpunan lain.",
-        image: "/image/hmif-itera.jpg"
+        image: "/asset/asset-irfan/hmif-itera.jpg"
       },
       {
         title: "Purna Paskibraka Indonesia",
         year: "2022 - sekarang",
         desc: "Anggota Purna Paskibraka Indonesia Cabang Kota Metro.",
-        image: "/image/logo-ppi.jpg"
+        image: "/asset/asset-irfan/logo-ppi.jpg"
       }
     ],
     committees: [
@@ -171,14 +173,14 @@ export const team: Member[] = [
         year: "2023",
         desc: "Aplikasi pelacakan finansial full-stack dengan visualisasi data grafik interaktif (Recharts), keamanan login berbasis JWT & Google OAuth, serta manajemen database PostgreSQL.",
         url: "https://github.com/irfanramadhan123/Pencatatan_Keuangan",
-        image: "/image/ss-uangku.png"
+        image: "/asset/asset-irfan/ss-uangku.png"
       },
       {
         title: "Interactive Birthday Gift Website (pippiyy)",
         year: "2024",
         desc: "Kado digital interaktif yang mengimplementasikan amplop Wax Seal animatif, Polaroid Photo Wall, dan pemutar musik latar. Dibangun menggunakan Next.js & React 19.",
         url: "https://github.com/irfanramadhan123/pippiyy",
-        image: "/image/ss_pippiy.png"
+        image: "/asset/asset-irfan/ss_pippiy.png"
       },
 
     ],

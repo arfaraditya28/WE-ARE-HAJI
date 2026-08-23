@@ -86,7 +86,7 @@ export const team: Member[] = [
     id: "jeremi",
     name: "Jeremi Pison Efrat Sianturi",
     role: "Software Engineer — Fullstack Developer",
-    photo: "/placeholder.svg",
+    photo: "/foto-jeremi.webp",
     bio: "Informatics student & Freelance Web Developer. Saya membangun antarmuka modern dengan React & Next.js, fokus pada performa, aksesibilitas, dan pengalaman pengguna yang bersih.",
     cvUrl: "https://jere.work/cv",
     portfolio: [

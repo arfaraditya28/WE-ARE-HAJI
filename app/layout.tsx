@@ -1,3 +1,4 @@
+// hanung ganteng izin tampil
 import type { Metadata } from "next"
 import "./globals.css"
 import ThemeToggle from "@/components/ThemeToggle"

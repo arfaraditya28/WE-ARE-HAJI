@@ -6,3 +6,6 @@
 *.pem
 npm-debug.log*
 .env*.local
+dev.err
+dev.log
+tsconfig.tsbuildinfo

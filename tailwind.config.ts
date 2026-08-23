@@ -1,3 +1,4 @@
+// hanung ganteng izin tampil
 import type { Config } from "tailwindcss"
 
 const config: Config = {

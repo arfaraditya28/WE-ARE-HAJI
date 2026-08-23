@@ -1,4 +1,5 @@
 import Link from "next/link"
+// hanung ganteng izin tampil
 import { getMember, getAdjacent } from "@/data/team"
 import { JereBackLink, JereMemberNav, jereSkills } from "@/components/jeremi-sections"
 import JeremiThemeToggle from "@/components/JeremiThemeToggle"

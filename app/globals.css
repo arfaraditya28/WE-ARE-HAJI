@@ -25,7 +25,8 @@ html {
   --jere-icon-filter: none;
 }
 
-[data-theme="dark"] {
+[data-theme="dark"],
+html.dark {
   --jere-bg-primary: #0a0a0a;
   --jere-bg-secondary: #111111;
   --jere-bg-tertiary: #1a1a1a;
@@ -45,7 +46,8 @@ html {
   :root {
     --jere-nav-bg: rgba(255, 255, 255, 0.9);
   }
-  [data-theme="dark"] {
+  [data-theme="dark"],
+  html.dark {
     --jere-nav-bg: rgba(10, 10, 10, 0.8);
   }
 }
@@ -53,7 +55,8 @@ html {
 html {
   color-scheme: light;
 }
-[data-theme="dark"] {
+[data-theme="dark"],
+html.dark {
   color-scheme: dark;
 }
 

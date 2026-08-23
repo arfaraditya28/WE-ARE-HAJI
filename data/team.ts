@@ -72,7 +72,7 @@ export const team: Member[] = [
     role: "Full-Stack Developer | Informatics Student",
     photo: "/image/gambar-pp-irfan.png",
     bio: "Mahasiswa Informatika semester 5 yang berfokus pada pengembangan perangkat lunak, Artificial Intelegence. Aktif berorganisasi dan selalu terbuka untuk belajar teknologi baru serta berkolaborasi dalam tim untuk menciptakan solusi digital.",
-    cvUrl: "/cv-irfan.pdf",
+    cvUrl: "/Irfan-Ramadhan-resume-2.pdf",
     portfolio: [
       { label: "GitHub", url: "https://github.com/irfanramadhan123" },
       { label: "LinkedIn", url: "https://www.linkedin.com/in/irfan-ramadhan" },

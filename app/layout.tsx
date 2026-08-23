@@ -18,7 +18,7 @@ export default function RootLayout({
       <head>
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var t=localStorage.getItem('haji-theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.classList.add('dark')}}catch(e){}})();`,
+            __html: `(function(){try{var t=localStorage.getItem('haji-theme')||localStorage.getItem('jere-theme');var isDark=t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme:dark)').matches);var v=isDark?'dark':'light';if(isDark)document.documentElement.classList.add('dark');document.documentElement.setAttribute('data-theme',v);document.documentElement.style.colorScheme=v;}catch(e){}})();`,
           }}
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />

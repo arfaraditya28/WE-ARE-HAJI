@@ -8,15 +8,26 @@ export default function ThemeToggle() {
 
   useEffect(() => {
     const isDark = document.documentElement.classList.contains("dark")
-    setTheme(isDark ? "dark" : "light")
+    const t = isDark ? "dark" : "light"
+    setTheme(t)
+    // sync data-theme for jeremi tokens on mount
+    try {
+      document.documentElement.setAttribute("data-theme", t)
+      document.documentElement.style.colorScheme = t
+    } catch {}
   }, [])
 
   function toggle() {
     const next = theme === "dark" ? "light" : "dark"
     setTheme(next)
     document.documentElement.classList.toggle("dark", next === "dark")
+    document.documentElement.setAttribute("data-theme", next)
+    try {
+      document.documentElement.style.colorScheme = next
+    } catch {}
     try {
       localStorage.setItem("haji-theme", next)
+      localStorage.setItem("jere-theme", next)
     } catch {
       // ignore
     }

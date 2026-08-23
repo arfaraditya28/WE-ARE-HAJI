@@ -2,7 +2,6 @@ import Link from "next/link"
 // hanung ganteng izin tampil
 import { getMember, getAdjacent } from "@/data/team"
 import { JereBackLink, JereMemberNav, jereSkills } from "@/components/jeremi-sections"
-import JeremiThemeToggle from "@/components/JeremiThemeToggle"
 
 export default function JeremiPage() {
   const member = getMember("jeremi")!
@@ -13,25 +12,6 @@ export default function JeremiPage() {
       className="flex-grow overflow-x-hidden"
       style={{ backgroundColor: "var(--jere-bg-primary)", color: "var(--jere-text-primary)" }}
     >
-      {/* Sticky header — light/dark toggle like jeremimyid Navbar */}
-      <header
-        className="sticky top-0 z-20 flex items-center justify-between border-b px-6 py-3 backdrop-blur-md md:px-8 lg:px-16"
-        style={{ backgroundColor: "var(--jere-nav-bg)", borderColor: "var(--jere-border)" }}
-      >
-        <Link href="/" className="flex items-center gap-2 text-sm font-bold" style={{ color: "var(--jere-text-primary)" }}>
-          <span className="inline-flex h-7 w-7 items-center justify-center rounded-lg text-xs font-extrabold" style={{ backgroundColor: "var(--jere-accent)", color: "var(--jere-bg-primary)" }}>
-            J
-          </span>
-          jeremi — HAJI
-        </Link>
-        <div className="flex items-center gap-2">
-          <span className="hidden sm:inline text-xs" style={{ color: "var(--jere-text-muted)" }}>
-            light / dark
-          </span>
-          <JeremiThemeToggle />
-        </div>
-      </header>
-
       {/* HERO — mirrors jere.work Home hero */}
       <section className="relative overflow-hidden pt-4 md:pt-12">
         {/* radial ornaments */}

@@ -5,3 +5,58 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* jere.work design tokens - isolated for member/jeremi bespoke page
+   Light is default (:root) like jeremimyid, dark via [data-theme="dark"] */
+:root {
+  --jere-bg-primary: #f5f5f5;
+  --jere-bg-secondary: #ffffff;
+  --jere-bg-tertiary: #e8e8e8;
+  --jere-bg-card: #ffffff;
+  --jere-text-primary: #0a0a0a;
+  --jere-text-secondary: #4a4a4a;
+  --jere-text-muted: #6b7280;
+  --jere-accent: #0088a8;
+  --jere-accent-hover: #006b85;
+  --jere-border: rgba(0, 0, 0, 0.12);
+  --jere-border-hover: rgba(0, 0, 0, 0.25);
+  --jere-nav-bg: rgba(255, 255, 255, 0.98);
+  --jere-icon-filter: none;
+}
+
+[data-theme="dark"] {
+  --jere-bg-primary: #0a0a0a;
+  --jere-bg-secondary: #111111;
+  --jere-bg-tertiary: #1a1a1a;
+  --jere-bg-card: #141414;
+  --jere-text-primary: #ffffff;
+  --jere-text-secondary: #a0a0a0;
+  --jere-text-muted: #666666;
+  --jere-accent: #00d9ff;
+  --jere-accent-hover: #00b4d8;
+  --jere-border: rgba(255, 255, 255, 0.08);
+  --jere-border-hover: rgba(255, 255, 255, 0.15);
+  --jere-nav-bg: rgba(10, 10, 10, 0.98);
+  --jere-icon-filter: brightness(0) invert(1);
+}
+
+@media (min-width: 768px) {
+  :root {
+    --jere-nav-bg: rgba(255, 255, 255, 0.9);
+  }
+  [data-theme="dark"] {
+    --jere-nav-bg: rgba(10, 10, 10, 0.8);
+  }
+}
+
+html {
+  color-scheme: light;
+}
+[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+::selection {
+  background: var(--jere-accent);
+  color: #fff;
+}

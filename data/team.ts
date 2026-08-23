@@ -84,12 +84,20 @@ export const team: Member[] = [
   },
   {
     id: "jeremi",
-    name: "Jeremi",
-    role: "—",
+    name: "Jeremi Pison Efrat Sianturi",
+    role: "Software Engineer — Fullstack Developer",
     photo: "/placeholder.svg",
-    bio: "",
-    portfolio: [],
-    experience: [],
+    bio: "Informatics student & Freelance Web Developer. Saya membangun antarmuka modern dengan React & Next.js, fokus pada performa, aksesibilitas, dan pengalaman pengguna yang bersih.",
+    cvUrl: "https://jere.work/cv",
+    portfolio: [
+      { label: "pplkitera.com — PPLK ITERA 2026 Website", url: "https://pplkitera.com" },
+      { label: "nodryx.com", url: "https://nodryx.com" },
+      { label: "resisst.web.id", url: "https://resisst.web.id" },
+    ],
+    experience: [
+      { year: "2024 — Sekarang", title: "Freelance Web Developer", desc: "Membangun aplikasi web modern untuk klien UMKM & personal brand dengan React, Next.js, dan Node.js." },
+      { year: "2026", title: "PPLK ITERA 2026 — Kepala Divisi IMTEK", desc: "Memimpin Divisi Implementasi Teknologi pada Program Pengenalan Lingkungan Kampus ITERA 2026, mengelola implementasi sistem, infrastruktur digital, dan dukungan teknis skala ribuan peserta." },
+    ],
   },
   {
     id: "irfan",

@@ -101,7 +101,7 @@ export const team: Member[] = [
   },
   {
     id: "irfan",
-    name: "Muhammad Irfan Ramadhan",
+    name: "Irfan",
     role: "Full-Stack Developer | Informatics Student",
     photo: "/asset/asset-irfan/gambar-pp-irfan.png",
     bio: "Mahasiswa Informatika semester 5 yang berfokus pada pengembangan perangkat lunak, Artificial Intelegence. Aktif berorganisasi dan selalu terbuka untuk belajar teknologi baru serta berkolaborasi dalam tim untuk menciptakan solusi digital.",

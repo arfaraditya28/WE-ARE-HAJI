@@ -156,33 +156,9 @@ export const team: Member[] = [
     ],
     committees: [
       {
-        title: "Staff Sub Divisi Management Acara - Hijau bergelora",
-        year: "2025",
-        desc: "Merencanakan dan mengeksekusi kegiatan perayaan Hari Kemerdekaan Indonesia yang diselengarakan oleh HMIF ITERA.",
-        image: "/placeholder.svg"
-      },
-      {
-        title: "Staff Sub Divisi Management Acara - Informatics Goes To TPB (IGTTPB)",
-        year: "2025",
-        desc: "Membantu dalam perancangan Rundown acara IGTTPB.",
-        image: "/placeholder.svg"
-      },
-      {
-        title: "Staff Sub Divisi Dana Usaha - Informatics Festival",
-        year: "2025",
-        desc: "Berperan dan membantu memenuhi kebutuhan pendanaan acara melalui kegiatan dana usaha.",
-        image: "/placeholder.svg"
-      },
-      {
-        title: "Staff Sub Divisi Operasional - Web3 Goes To ITERA",
+        title: "Staff Sub Divisi Management Acara - Informatics Festival",
         year: "2026",
-        desc: "Mengelola kebutuhan operasional untuk memastikan rangkaian acara berjalan dengan baik.",
-        image: "/placeholder.svg"
-      },
-      {
-        title: "Staff Divisi Acara - Point Project 4.0",
-        year: "2024",
-        desc: "Membantu dalam perancangan rundown acara lomba Point Project.",
+        desc: "Berperan dalam pengelolaan perlombaan pada acaa Informatics Festival 2026.",
         image: "/placeholder.svg"
       },
       {
@@ -192,9 +168,9 @@ export const team: Member[] = [
         image: "/placeholder.svg"
       },
       {
-        title: "Staff Sub Divisi Management Acara - Informatics Festival",
-        year: "2026",
-        desc: "Berperan dalam pengelolaan perlombaan pada acaa Informatics Festival 2026.",
+        title: "Staff Sub Divisi Dana Usaha - Informatics Festival",
+        year: "2025",
+        desc: "Berperan dan membantu memenuhi kebutuhan pendanaan acara melalui kegiatan dana usaha.",
         image: "/placeholder.svg"
       }
     ],
